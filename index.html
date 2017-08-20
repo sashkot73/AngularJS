@@ -10,14 +10,22 @@
 	<script>
 		angular.module('myApp', []).
 		controller('myCtrl', function($scope) {
-
+			$scope.click = function() {
+				alert('Clicked.');
+			}
 		})
 	</script>
 	
 </head>
 <body>
-	<div class="container">
-	<div class="btn btn-primary btn-lg" onclick="alert('Clicked')">Content</div>
+	<div class="container" ng-controller="myCtrl">
+		<div class="btn btn-primary btn-lg" ng-click="click()">Content</div>
+	</div>
+
+	
+	<div class="panel user">
+		<div class="user__avatar">ava</div>
+		<div class="user__name">Name</div>
 	</div>
 </body>
 </html>
